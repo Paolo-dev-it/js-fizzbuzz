@@ -23,8 +23,8 @@ ul {
 }
 
 li {
-  width: calc(100vw / 14 - 10px);
-  height: calc(100vh / 14 - 10px); /*altezza h1*/
+  width: 70px;
+  height: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
