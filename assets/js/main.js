@@ -1,33 +1,27 @@
 
-let container = document.getElementById("container");
+for (let x = 1; x <= 100; x++) {
 
-let element = document.createElement("div");
+    let ul = document.getElementById("list");
+    let li = document.createElement('li');
 
-element.classList.add('text-red',"fs-4", "p-5", "bg-success");
-
-container.classList.add("bg-red")
-
-container.append(element);
-
-
-for (let i = 1; i <= 100; i++) {
-
-    if (i % 3 == 0 && i % 5 == 0){
+    if (x % 3 == 0 && x % 5 == 0){ // SE IL NUMERO E MULTIPLO DI ENTRAMBI
         // console.log(`${i} FIZZBUZZ`);
-        element.innerHTML += `<p class="bg-danger">${i} FIZZBUZZ</p>`;
+        li.innerText += "FIZZBUZZ";
+        li.style.backgroundColor = "red";
         
-        
-    }else if(i % 3 == 0){
+    }else if(x % 3 == 0){ // SE IL NUMERO E MULTIPLO DI 3
         // console.log(`${i} FIZZ`);
-        element.innerHTML += `<p class="bg-success">${i} FIZZ</p>`;
-
-    }else if (i % 5 == 0){
+        li.innerText += "FIZZ";
+        li.style.backgroundColor = "Green";
+    } else if (x % 5 == 0){ // SE IL NUMERO E MULTIPLO DI 5
         // console.log(`${i} BUZZ`);
-        element.innerHTML += `<p class="bg-warning">${i} BUZZ</p>`;
-
-    }else{
+        li.innerText += "BUZZ";
+        li.style.backgroundColor = "yellow";
+    }else{ 
         // console.log(`${i}`);
-        element.innerHTML += `<p class="bg-primary">${i}</p>`;
+        li.innerText += x;
+        li.style.backgroundColor = "lightblue";
     }
-}
+     ul.append(li);
 
+}
